@@ -1,0 +1,13 @@
+This is a debug rendering class for drawing debug Box2D info on an SFML window.
+This code is an SFML2-compatible (as of 07/09/2012) version of the original class written by Allen Jordan, and Xabier Larrakoetxea.
+The original version can be found here:
+
+	https://github.com/slok/Box2D-and-SFML-demo
+
+The original was released under the GPL, and as such, so is this version.
+
+-------------
+
+For info on how to use this class, see here:
+
+	http://www.iforce2d.net/b2dtut/debug-draw
