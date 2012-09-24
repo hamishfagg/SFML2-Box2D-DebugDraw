@@ -74,8 +74,8 @@ void DebugDraw::DrawSegment(const b2Vec2& p1, const b2Vec2& p2, const b2Color& c
 void DebugDraw::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2Vec2& axis, const b2Color& color)
 {
     //no converion in cordinates of center and upper left corner, Circle in sfml is managed by default with the center
-    sf::CircleShape circle((radius*RATIO));
-    circle.setPosition(center.x*RATIO, center.y*RATIO);
+    sf::CircleShape circle(radius*RATIO);
+    circle.setPosition(center.x*RATIO - radius*RATIO, center.y*RATIO - radius*RATIO);
     circle.setFillColor(this->B2SFColor(color, 50));
     circle.setOutlineColor(this->B2SFColor(color));
     circle.setOutlineThickness(1.f);
@@ -90,7 +90,7 @@ void DebugDraw::DrawSolidCircle(const b2Vec2& center, float32 radius, const b2Ve
 void DebugDraw::DrawCircle(const b2Vec2& center, float32 radius, const b2Color& color)
 {
     sf::CircleShape circle((radius*RATIO));
-    circle.setPosition(center.x*RATIO, center.y*RATIO);
+    circle.setPosition(center.x*RATIO-radius*RATIO, center.y*RATIO-radius*RATIO);
     circle.setFillColor(sf::Color::Transparent);
     circle.setOutlineColor(this->B2SFColor(color));
     circle.setOutlineThickness(1.f);
